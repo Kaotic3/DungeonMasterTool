@@ -15,7 +15,7 @@ The tool also has a battle mode and a dice rolling screen.  The dice rolling scr
 The battle prepare mode allows for selection of NPC characters - the AC/HP of NPC characters is automatically updated.  
 Initiative rolls for NPC characters are automatically created - any modifiers can be manually added.
 
-PC Characters are also added on this screen.  Once ready, clicking the "Battle" button orgnises the characters by initiative in a list with AC displayed.
+PC Characters are also added on this screen.  Once ready, clicking the "Battle" button organises the characters by initiative in a list with AC displayed.
 
 An amendable field for HP exists that can be changed manually during combat.
 
