@@ -1,0 +1,110 @@
+﻿<Window x:Class="DungeonMasterv4.Views.SetUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DungeonMasterv4.Views"
+        mc:Ignorable="d" Background="#292C33"
+        FontSize="18"
+        Title="Battle Setup" Height="900" Width="1400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!-- Menu Items -->
+        <DockPanel Grid.ColumnSpan="9" Grid.Row="0">
+            <Menu DockPanel.Dock="Top" FontSize="18" Foreground="#7997A0" Background="#292C33">
+                <MenuItem Header="_File" Foreground="#7997A0" Grid.Column="0" HorizontalAlignment="Stretch">
+                    <MenuItem x:Name="Exit" Header="_Exit" Foreground="#7997A0" Background="#292C33" Click="Exit_Click"/>
+                </MenuItem>
+                <MenuItem x:Name="btnSetUp" Header="Prepare Battle" Foreground="#7997A0" Background="#292C33" Click="btnSetUp_Click"/>
+                <MenuItem x:Name="EquipmentList" Header="Equipment" Foreground="#7997A0" Background="#292C33" Click="Equipment_Click"/>
+                <MenuItem x:Name="btnAllSpells" Header="All Spells" Foreground="#7997A0" Background="#292C33" Click="btnAllSpells_Click"/>
+                <MenuItem x:Name="btnClasses" Header="Classes" Foreground="#7997A0" Background="#292C33" Click="btnClasses_Click"/>
+                <MenuItem x:Name="btnMonsters" Header="Monsters" Foreground="#7997A0" Background="#292C33" Click="btnMonsters_Click"/>
+                <MenuItem x:Name="Conditions" Header="Conditions" Foreground="#7997A0" Background="#292C33" Click="Conditions_Click"/>
+                <MenuItem x:Name="Rules" Header="Rules" Foreground="#7997A0" Background="#292C33" Click="Rules_Click"/>
+                <MenuItem x:Name="Dice" Header="Dice" Foreground="#7997A0" Background="#292C33" Click="Dice_Click"/>
+            </Menu>
+        </DockPanel>
+        <TextBox x:Name="tbList1" Grid.Row="1" Grid.Column="0" Margin="10" TextChanged="tbList1_TextChanged" TabIndex="0"/>
+        <ListBox x:Name="lbMonster1" Grid.Row="2" Grid.Column="0" Margin="10" Grid.RowSpan="3" Grid.ColumnSpan="2" MouseDoubleClick="lbMonster1_MouseDoubleClick"/>
+
+        <!-- Boxes for Non-Player Characters -->
+        <Label Content="Name - AC - HP" Grid.Row="0" Grid.Column="3" Foreground="Gray" FontSize="18" VerticalAlignment="Bottom"/>
+        <Label Content="Details" Grid.Row="0" Grid.Column="5" Foreground="Gray" FontSize="18" VerticalAlignment="Bottom"/>
+        <Label Content="Iniative" Grid.Row="0" Grid.Column="8" Foreground="Gray" FontSize="18" VerticalAlignment="Bottom"/>
+
+        <TextBox x:Name="tbSelectedMonster1" Grid.Row="1" Grid.Column="3" Margin="10" Grid.ColumnSpan="2" TabIndex="50"/>
+        <TextBox x:Name="tbInitiative1" Grid.Row="1" Grid.Column="8" Margin="10" TabIndex="1"/>
+        <TextBox x:Name="tbMondetails1" Grid.Row="1" Grid.Column="5" Grid.RowSpan="2" Margin="10" Grid.ColumnSpan="3" TabIndex="88" TextWrapping="Wrap"/>
+        <TextBox x:Name="tbSelectedMonster2" Grid.Row="3" Grid.Column="3" Margin="10" Grid.ColumnSpan="2" TabIndex="51"/>
+        <TextBox x:Name="tbInitiative2" Grid.Row="3" Grid.Column="8" Margin="10" TabIndex="2"/>
+        <TextBox x:Name="tbMondetails2" Grid.Row="3" Grid.Column="5" Grid.RowSpan="2" Margin="10" Grid.ColumnSpan="3" TabIndex="88" TextWrapping="Wrap"/>
+        <TextBox x:Name="tbSelectedMonster3" Grid.Row="5" Grid.Column="3" Margin="10" Grid.ColumnSpan="2" TabIndex="52"/>
+        <TextBox x:Name="tbInitiative3" Grid.Row="5" Grid.Column="8" Margin="10" TabIndex="3"/>
+        <TextBox x:Name="tbMondetails3" Grid.Row="5" Grid.Column="5" Grid.RowSpan="2" Margin="10" Grid.ColumnSpan="3" TabIndex="88" TextWrapping="Wrap"/>
+        <TextBox x:Name="tbSelectedMonster4" Grid.Row="7" Grid.Column="3" Margin="10" Grid.ColumnSpan="2" TabIndex="53"/>
+        <TextBox x:Name="tbInitiative4" Grid.Row="7" Grid.Column="8" Margin="10" TabIndex="4"/>
+        <TextBox x:Name="tbMondetails4" Grid.Row="7" Grid.Column="5" Grid.RowSpan="2" Margin="10" Grid.ColumnSpan="3" TabIndex="88" TextWrapping="Wrap"/>
+        <TextBox x:Name="tbSelectedMonster5" Grid.Row="9" Grid.Column="3" Margin="10" Grid.ColumnSpan="2" TabIndex="54"/>
+        <TextBox x:Name="tbInitiative5" Grid.Row="9" Grid.Column="8" Margin="10" TabIndex="5"/>
+        <TextBox x:Name="tbMondetails5" Grid.Row="9" Grid.Column="5" Grid.RowSpan="2" Margin="10" Grid.ColumnSpan="3" TabIndex="88" TextWrapping="Wrap"/>
+
+        <!-- Boxes for Player Characters -->
+        <Label Content="PC Character Names" Grid.Row="12" Grid.Column="1" Foreground="Gray" FontSize="18"/>
+        <Label Content="Initiative" Grid.Row="12" Grid.Column="3" Foreground="Gray" FontSize="18"/>
+        <Label Content="AC" Grid.Row="12" Grid.Column="4" Foreground="Gray" FontSize="18"/>
+        <Label Content="HP" Grid.Row="12" Grid.Column="5" Foreground="Gray" FontSize="18"/>
+
+        <TextBox x:Name="tbSelectedPC1" Grid.Row="13" Grid.Column="1" Margin="10" Grid.ColumnSpan="2" TabIndex="6"/>
+        <TextBox x:Name="tbInitiative6" Grid.Row="13" Grid.Column="3" Margin="10" TabIndex="7"/>
+        <TextBox x:Name="tbPCAC1" Grid.Row="13" Grid.Column="4" Margin="10" TabIndex="8"/>
+        <TextBox x:Name="tbPCHP1" Grid.Row="13" Grid.Column="5" Margin="10" TabIndex="9"/>
+        <TextBox x:Name="tbSelectedPC2" Grid.Row="14" Grid.Column="1" Margin="10" Grid.ColumnSpan="2" TabIndex="10"/>
+        <TextBox x:Name="tbInitiative7" Grid.Row="14" Grid.Column="3" Margin="10" TabIndex="11"/>
+        <TextBox x:Name="tbPCAC2" Grid.Row="14" Grid.Column="4" Margin="10" TabIndex="12"/>
+        <TextBox x:Name="tbPCHP2" Grid.Row="14" Grid.Column="5" Margin="10" TabIndex="13"/>
+        <TextBox x:Name="tbSelectedPC3" Grid.Row="15" Grid.Column="1" Margin="10" Grid.ColumnSpan="2" TabIndex="14"/>
+        <TextBox x:Name="tbInitiative8" Grid.Row="15" Grid.Column="3" Margin="10" TabIndex="15"/>
+        <TextBox x:Name="tbPCAC3" Grid.Row="15" Grid.Column="4" Margin="10" TabIndex="16"/>
+        <TextBox x:Name="tbPCHP3" Grid.Row="15" Grid.Column="5" Margin="10" TabIndex="17"/>
+
+        <Button x:Name="btnBattle" Grid.Column="0" Grid.Row="5" Background="DarkRed" Content="Battle" Foreground="White" FontSize="16" Margin="10" Click="btnBattle_Click"/>
+        <Button x:Name="btnCleared"  Grid.Column="1" Grid.Row="5" Background="DarkGreen" Content="Clear All NPCs" Foreground="White" FontSize="16" Margin="10" Click="btnCleared_Click"/>
+        <Button x:Name="btnClearedPC"  Grid.Column="0" Grid.Row="13" Background="DarkGreen" Content="Clear All PCs" Foreground="White" FontSize="16" Margin="10" Click="btnClearedPC_Click"/>
+
+        <Button x:Name="btnClear1" Grid.Row="1" Grid.Column="2" Background="DarkGreen" Content="Clear NPC" Foreground="White" FontSize="16" Margin="10" Click="btnClear1_Click"/>
+        <Button x:Name="btnClear2" Grid.Row="3" Grid.Column="2" Background="DarkGreen" Content="Clear NPC" Foreground="White" FontSize="16" Margin="10" Click="btnClear2_Click"/>
+        <Button x:Name="btnClear3" Grid.Row="5" Grid.Column="2" Background="DarkGreen" Content="Clear NPC" Foreground="White" FontSize="16" Margin="10" Click="btnClear3_Click"/>
+        <Button x:Name="btnClear4" Grid.Row="7" Grid.Column="2" Background="DarkGreen" Content="Clear NPC" Foreground="White" FontSize="16" Margin="10" Click="btnClear4_Click"/>
+        <Button x:Name="btnClear5" Grid.Row="9" Grid.Column="2" Background="DarkGreen" Content="Clear NPC" Foreground="White" FontSize="16" Margin="10" Click="btnClear5_Click"/>
+    </Grid>
+</Window>

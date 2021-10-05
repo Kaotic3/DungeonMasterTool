@@ -1,0 +1,66 @@
+﻿<Window x:Class="DungeonMasterv4.Views.Equipment"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DungeonMasterv4.Views"
+        mc:Ignorable="d" Background="#292C33"
+        FontSize="18"
+        Title="Equipment List" Height="900" Width="1400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.ColumnSpan="9" Grid.Row="0">
+            <Menu DockPanel.Dock="Top" FontSize="18" Foreground="#7997A0" Background="#292C33">
+                <MenuItem Header="_File" Foreground="#7997A0" Grid.Column="0" HorizontalAlignment="Stretch">
+                    <MenuItem x:Name="Exit" Header="_Exit" Foreground="#7997A0" Background="#292C33" Click="Exit_Click"/>
+                </MenuItem>
+                <MenuItem x:Name="btnSetUp" Header="Prepare Battle" Foreground="#7997A0" Background="#292C33" Click="btnSetUp_Click"/>
+                <MenuItem x:Name="EquipmentList" Header="Equipment" Foreground="#7997A0" Background="#292C33" Click="Equipment_Click"/>
+                <MenuItem x:Name="btnAllSpells" Header="All Spells" Foreground="#7997A0" Background="#292C33" Click="btnAllSpells_Click"/>
+                <MenuItem x:Name="btnClasses" Header="Classes" Foreground="#7997A0" Background="#292C33" Click="btnClasses_Click"/>
+                <MenuItem x:Name="btnMonsters" Header="Monsters" Foreground="#7997A0" Background="#292C33" Click="btnMonsters_Click"/>
+                <MenuItem x:Name="Conditions" Header="Conditions" Foreground="#7997A0" Background="#292C33" Click="Conditions_Click"/>
+                <MenuItem x:Name="Rules" Header="Rules" Foreground="#7997A0" Background="#292C33" Click="Rules_Click"/>
+                <MenuItem x:Name="Dice" Header="Dice" Foreground="#7997A0" Background="#292C33" Click="Dice_Click"/>
+            </Menu>
+        </DockPanel>
+        <Label Content="Equipment Categories: " Foreground="#7997A0" Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox x:Name="tbCatSearch" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0" Margin="10" TextChanged="tbCatSearch_TextChanged"/>
+        <ListBox x:Name="lbEquipCat" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="8" Margin="10" MouseDoubleClick="lbEquipCat_MouseDoubleClick"/>
+        <Label Content="Cateogry List: " Foreground="#7997A0" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox x:Name="tbListSearch" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="3" Margin="10" TextChanged="tbListSearch_TextChanged"/>
+        <ListBox x:Name="lbCatList" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="2" Grid.RowSpan="8" Margin="10" MouseDoubleClick="lbCatList_MouseDoubleClick"/>
+        <Label Content="Details: " Foreground="#7997A0" Grid.Row="2" Grid.Column="6" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox x:Name="tbCatDetails" Grid.Row="3" Grid.Column="6" Grid.ColumnSpan="3" Grid.RowSpan="13" Margin="10" TextWrapping="Wrap"/>
+        <Label Content="" Foreground="#7997A0" Grid.Row="5" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
+</Window>
